@@ -1,9 +1,4 @@
-import express, {
-  Request,
-  Response,
-  NextFunction,
-  ErrorRequestHandler,
-} from "express";
+import { Request, Response } from "express";
 import axios from "axios";
 
 //Random quote controller

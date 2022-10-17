@@ -1,17 +1,12 @@
-import express, {
-  Request,
-  Response,
-  NextFunction,
-  ErrorRequestHandler,
-} from "express";
+import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import { User } from "../utils/interfaces";
+import { User } from "../../utils/interfaces";
 import bcrypt from "bcryptjs";
 import { v4 as uuidv4 } from "uuid";
-import { getUser, saveUser } from "../database/userModel";
+import { getUser, saveUser } from "../../database/userModel";
 
 //User login controller
-export const usersLogin = async (req: Request, res: Response) => {
+export const usersLogin = (req: Request, res: Response) => {
   const { email, password } = req.body;
 
   let user = getUser().find((user: User) => user.email === email);
@@ -19,9 +14,11 @@ export const usersLogin = async (req: Request, res: Response) => {
   const secret = process.env.secret;
 
   if (!user) {
-    return res.status(400).json({ success: false, Message: "User not found!" });
+    return res.status(400).json({
+      success: false,
+      Message: "User not found or invalid credentials!",
+    });
   }
-
 
   if (user && bcrypt.compareSync(password, user.password)) {
     const token = jwt.sign(
@@ -33,12 +30,15 @@ export const usersLogin = async (req: Request, res: Response) => {
     );
     res.status(200).send({ success: true, user: user.email, token });
   } else {
-    res.status(400).json({ success: false, Message: "Invalid credentials!" });
+    res.status(400).json({
+      success: false,
+      Message: "User not found or invalid credentials!",
+    });
   }
 };
 
 //User registration controller
-export const userRegister = async (req: Request, res: Response) => {
+export const userRegister = (req: Request, res: Response) => {
   const { name, email, password } = req.body;
 
   let user = {

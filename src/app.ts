@@ -2,7 +2,6 @@ import express, {
   Application,
   Request,
   Response,
-  ErrorRequestHandler,
 } from "express";
 import { config } from "dotenv";
 config();
@@ -11,8 +10,8 @@ import { Server } from "http";
 import errorHandler from "./utils/errorHandler";
 import authJwt from "./utils/jwt";
 import cors from "cors";
-import usersRoutes from "./routes/usersRoute";
-import quoteRoutes from "./routes/quoteRoute";
+import usersRoutes from "./auth-service/routes/usersRoute";
+import quoteRoutes from "./quote-service/routes/quoteRoute";
 
 //App variables
 const app: Application = express();

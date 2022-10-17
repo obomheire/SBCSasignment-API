@@ -1,10 +1,6 @@
-import express, {
-  Request,
-  Response,
-  NextFunction,
-  ErrorRequestHandler,
-} from "express";
+import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
 
+// Error handler
 const errorHandler = () => {
   return (
     err: ErrorRequestHandler,
@@ -18,7 +14,7 @@ const errorHandler = () => {
     }
 
     if (err.name === "ValidationError") {
-      // mongoose validation error
+      // database validation error
       return res.status(400).json({ message: err });
     }
 
