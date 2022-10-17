@@ -12,7 +12,7 @@ import errorHandler from "./utils/errorHandler";
 import authJwt from "./utils/jwt";
 import cors from "cors";
 import usersRoutes from "./routes/usersRoute";
-// import { getUsers } from "./controllers/usersController";
+import { getUser } from "./database/userModel";
 
 //App variables
 const app: Application = express();
@@ -38,6 +38,6 @@ const PORT = process.env.PORT || 3000;
 //App Server
 const server: Server = app.listen(PORT, () => {
   console.log(api);
-  // getUsers();
+  getUser();
   console.log(`App listning on port ${PORT}`);
 });

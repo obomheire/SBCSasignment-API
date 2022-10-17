@@ -6,11 +6,12 @@ const authJwt = () => {
     return expressJwt({
       secret,
       algorithms: ["HS256"],
-    }).unless({ 
+    }).unless({
       path: [
         { url: "/", methods: ["GET"] },
-        { url: /\/api\/v1\/products(.*)/, methods: ["GET", "OPTIONS"] },
         `${api}/users/login`,
+        `${api}/users/register`,
+        // { url: /\/api\/v1\/products(.*)/, methods: ["GET", "OPTIONS"] },
       ],
     }); 
 
