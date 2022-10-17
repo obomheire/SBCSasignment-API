@@ -12,7 +12,7 @@ import errorHandler from "./utils/errorHandler";
 import authJwt from "./utils/jwt";
 import cors from "cors";
 import usersRoutes from "./routes/usersRoute";
-import { getUser } from "./database/userModel";
+import quoteRoutes from "./routes/quoteRoute";
 
 //App variables
 const app: Application = express();
@@ -24,12 +24,13 @@ app.use(authJwt());
 app.use(morgan("dev"));
 app.use(errorHandler());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false })); 
+app.use(express.urlencoded({ extended: false }));
 
 //Routes
 app.use(`${api}/users`, usersRoutes);
+app.use(`${api}/random`, quoteRoutes);
 app.get("/", (req: Request, res: Response) => {
-  res.send({ status: "Running", message: "Hello from microservices Api " });
+  res.send({ status: "Running", message: "Hello from microservices API" });
 });
 
 //App Port
@@ -37,7 +38,5 @@ const PORT = process.env.PORT || 3000;
 
 //App Server
 const server: Server = app.listen(PORT, () => {
-  console.log(api);
-  getUser();
   console.log(`App listning on port ${PORT}`);
 });
