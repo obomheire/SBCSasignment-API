@@ -28,7 +28,11 @@ export const usersLogin = (req: Request, res: Response) => {
       <string>secret,
       { expiresIn: "1d" }
     );
-    res.status(200).send({ success: true, user: user.email, token });
+    res.status(200).send({
+      success: true,
+      Message: "User successfully login",
+      token,
+    });
   } else {
     res.status(400).json({
       success: false,
@@ -60,5 +64,5 @@ export const userRegister = (req: Request, res: Response) => {
 
   saveUser(userData);
 
-  return res.status(200).send({ Message: "User successfully created!", user });
+  return res.status(200).send({ Message: "User successfully created!" });
 };

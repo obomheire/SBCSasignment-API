@@ -39,3 +39,6 @@ const PORT = process.env.PORT || 3000;
 const server: Server = app.listen(PORT, () => {
   console.log(`App listning on port ${PORT}`);
 });
+
+
+export default app;
