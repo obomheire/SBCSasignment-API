@@ -36,7 +36,7 @@
 
 ##### Request body:
 
-##### { "email":"test@gmail.com", "password": "Secret@123"}
+##### { "email":"test@gmail.com", "password": "your-password"}
 
 ##### Response body:
 
@@ -52,7 +52,7 @@
 
 ##### Request body:
 
-##### { "name": "Test User2", "email": "test2@gmail.com", "password": "Secret@123" }
+##### { "name": "Test User2", "email": "test2@gmail.com", "password": "your-password" }
 
 ##### Response body:
 
