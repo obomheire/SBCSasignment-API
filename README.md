@@ -1,4 +1,6 @@
-#### Postman documenation for the api: https://documenter.getpostman.com/view/23412698/2s847HNCV6
+#### Postman documenation page for the API: https://documenter.getpostman.com/view/23412698/2s847HNCV6
+
+#### NB: To open the API in postman, click the "Run in Postman" button at the top right corner of the documentation page
 
 #### 1.  Clone the repo: https://github.com/obomheire/SBCSasignment-API.git
 
