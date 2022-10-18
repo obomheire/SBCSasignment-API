@@ -3,10 +3,10 @@ import express, {
   Request,
   Response,
 } from "express";
+import { Server } from "http";
 import { config } from "dotenv";
 config();
 import morgan from "morgan";
-import { Server } from "http";
 import errorHandler from "./utils/errorHandler";
 import authJwt from "./utils/jwt";
 import cors from "cors";
@@ -39,6 +39,5 @@ const PORT = process.env.PORT || 3000;
 const server: Server = app.listen(PORT, () => {
   console.log(`App listning on port ${PORT}`);
 });
-
 
 export default app;

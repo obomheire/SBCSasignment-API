@@ -1,20 +1,20 @@
 [
   {
-    "id": "e09bf693-1cd8-4174-8051-c3ddebfacfe3",
-    "name": "Zack Bello",
-    "email": "zack@gmail.com",
-    "password": "$2a$10$m4vHVy/eGa92G4yT6gRKZ.iu3NLz9gO8UP0KLU4mbxdn6Ualrifz2"
+    "id": "c6c64376-30cf-4d79-96f2-cd1332e3b684",
+    "name": "Test User",
+    "email": "test@gmail.com",
+    "password": "$2a$10$y3VabD4zLqXmDpGl09DExOcozLgmo7yXhNv0so.m2.mnpFyTar0dO"
   },
   {
-    "id": "7276de7f-1c9a-4176-9a6d-7a5e23ef2369",
-    "name": "Zack Bello",
-    "email": "zack1@gmail.com",
-    "password": "$2a$10$yN/3l3EokJ8gOlvQOE6I4OiP9nRMwZNzhXdLGm20avw7mxQ.wRpUK"
+    "id": "d282d59d-fa0f-4e7c-b68b-011f7046ff21",
+    "name": "Test User1",
+    "email": "test1@gmail.com",
+    "password": "$2a$10$uCtzGeQXNXAkSQCC7UpH8.WJmJtFhvNWf/Cvbx5IQbmrAfOk9EsYm"
   },
   {
-    "id": "417e934f-184c-4784-93d4-9b10996dcda3",
-    "name": "Zack Bello",
-    "email": "zack2@gmail.com",
-    "password": "$2a$10$He3xISLAH/ZBuK1vy5vx1uN7L6KKfUv4LiPQngaHunYwd9L9qYkZG"
+    "id": "23a82d39-6176-4792-8157-d955febda6d4",
+    "name": "Test User2",
+    "email": "test2@gmail.com",
+    "password": "$2a$10$jITudgruAJ8PYPDGfZTvsupjeULdpyz3CWfWtiU9iWjvQubBLGcvu"
   }
 ]

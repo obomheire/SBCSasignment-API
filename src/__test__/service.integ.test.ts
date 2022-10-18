@@ -48,7 +48,7 @@ describe("POST /login", () => {
         });
       });
     } else if (user && bcrypt.compareSync(loginUser.password, user.password)) {
-      test("user with valid password shoild be able to login", async () => {
+      test("user with valid password should be able to login", async () => {
         const res = await request.post("/api/v1/users/login").send(loginUser);
         token = res.body.token;
         expect(res.status).toBe(200);
@@ -70,22 +70,25 @@ describe("POST /login", () => {
 
 // Random quote test
 describe("GEt /quote", () => {
-if (token) {
-  test("user should get quote", async () => {
-    const res = await request
-      .get("/api/v1/random/quote")
-      .set("Authorization", `Bearer ${token}`);
-    expect(res.status).toBe(200);
-    expect(res.body).toMatchObject({
-      quote: expect.any(Object),
-    });
-  });
-} else {
-  test("user should not get quote", async () => {
-    const res = await request.get("/api/v1/random/quote");
-    expect(res.status).toBe(401);
-  });
-}
+  describe("User should be/shouldn't get quote", () => {
+    if (token) {
+      test("user should get quote", async () => {
+        const res = await request
+          .get("/api/v1/random/quote")
+          .set("Authorization", `Bearer ${token}`);
+        expect(res.status).toBe(200);
+        expect(res.body).toMatchObject({
+          quote: expect.any(Object),
+        });
+      });
+    } else {
+      test("user should not get quote", async () => {
+        const res = await request.get("/api/v1/random/quote");
+        expect(res.status).toBe(401);
+      });
+    }
+   });
+  
 });
 
 // Setup test
