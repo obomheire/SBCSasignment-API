@@ -1,79 +1,79 @@
-## Clone the repo: https://github.com/obomheire/SBCSasignment-API.git
+### Clone the repo: https://github.com/obomheire/SBCSasignment-API.git
 
-## Install dependencies: run ( npm install or yarn )
+### Install dependencies: run ( npm install or yarn )
 
-## Build/Compile the app: run ( npm run build / yarn build or npm run tsc / yarn tsc )
+### Build/Compile the app: run ( npm run build / yarn build or npm run tsc / yarn tsc )
 
-## Start the server: run ( npm run start or yarn start )
+### Start the server: run ( npm run start or yarn start )
 
-## NB: To compile and start the app at the same time in a watch mode, run ( npm run dev or yarn dev )
+### NB: To compile and start the app at the same time in a watch mode, run ( npm run dev or yarn dev )
 
-## To run the test: run ( npm run test / yarn test or npm run jest / yarn jest )
+### To run the test: run ( npm run test / yarn test or npm run jest / yarn jest )
 
-## To run the test in watch mode: run ( npm run jest --watch or yarn jest --watch )
+### To run the test in watch mode: run ( npm run jest --watch or yarn jest --watch )
 
-# API Endpoints
+## API Endpoints
 
-## GET localhost:3000/ : Welcome message
+### GET localhost:3000/ : Welcome message
 
-## API Landing Route:
+### API Landing Route:
 
-### To access the API landing page, make a GET request to localhost:3000/
+#### To access the API landing page, make a GET request to localhost:3000/
 
-### Request url:
+#### Request url:
 
-### localhost:3000/
+#### localhost:3000/
 
-### Response body:
+#### Response body:
 
-### { "status": "Running", "message": "Hello from microservices API"}
+#### { "status": "Running", "message": "Hello from microservices API"}
 
-## POST localhost:3000/api/v1/users/login : Login a user
+### POST localhost:3000/api/v1/users/login : Login a user
 
-## API Login Route:
+### API Login Route:
 
-### To login, make a POST request to localhost:3000/api/v1/users/login
+#### To login, make a POST request to localhost:3000/api/v1/users/login
 
-### Request url:
+#### Request url:
 
-### localhost:3000/api/v1/users/login
+#### localhost:3000/api/v1/users/login
 
-### Request body:
+#### Request body:
 
-### { "email":"test@gmail.com", "password": "Secret@123"}
+#### { "email":"test@gmail.com", "password": "Secret@123"}
 
-### Response body:
+#### Response body:
 
-### { "success": true, "Message": "User successfully login", "token": "token"}
+#### { "success": true, "Message": "User successfully login", "token": "token"}
 
-## POST localhost:3000/api/v1/users/signup : Signup a user
+### POST localhost:3000/api/v1/users/signup : Signup a user
 
-## API Registration Route:
+### API Registration Route:
 
-### To register new user: make a post request to localhost:3000/api/v1/users/register
+#### To register new user: make a post request to localhost:3000/api/v1/users/register
 
-### Request url:
+#### Request url:
 
-### localhost:3000/api/v1/users/register
+#### localhost:3000/api/v1/users/register
 
-### Request body:
+#### Request body:
 
-### { "name": "Test User2", "email": "test2@gmail.com", "password": "Secret@123" }
+#### { "name": "Test User2", "email": "test2@gmail.com", "password": "Secret@123" }
 
-### Response body:
+#### Response body:
 
-### { "Message": "User successfully created!"}
+#### { "Message": "User successfully created!"}
 
-## GET localhost:3000/api/v1/random/quote : Get a random quote
+### GET localhost:3000/api/v1/random/quote : Get a random quote
 
-## API Random Quotes:
+### API Random Quotes:
 
-### To get random quote, login from the login route. Copy the token in the response body and paste it in the Authorization > Bearer Token > Token tab of the GET Quotes route and make a GET request to localhost:3000/api/v1/random/quote
+#### To get random quote, login from the login route. Copy the token in the response body and paste it in the Authorization > Bearer Token > Token tab of the GET Quotes route and make a GET request to localhost:3000/api/v1/random/quote
 
-### Request url:
+#### Request url:
 
-### localhost:3000/api/v1/random/quote
+#### localhost:3000/api/v1/random/quote
 
-### Response body:
+#### Response body:
 
-### { "quote": { "text": "Genius is one percent inspiration and ninety-nine percent perspiration.", "author": "Thomas Edison" }}
+#### { "quote": { "text": "Genius is one percent inspiration and ninety-nine percent perspiration.", "author": "Thomas Edison" }}
