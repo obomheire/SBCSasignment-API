@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "dev": "concurrently \"tsc -w\" \"nodemon ./src/app.ts\"",
-    "start": "node dist/app.js",
+    "dev": "concurrently \"tsc -w\" \"nodemon ./src/server.ts\"",
+    "start": "node dist/server.js",
     "build": "tsc"
   },
   "devDependencies": {

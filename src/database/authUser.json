@@ -16,5 +16,11 @@
     "name": "Test User2",
     "email": "test2@gmail.com",
     "password": "$2a$10$jITudgruAJ8PYPDGfZTvsupjeULdpyz3CWfWtiU9iWjvQubBLGcvu"
+  },
+  {
+    "id": "db0b7c54-8886-4139-b7e4-a9d046c1fe66",
+    "name": "Test User",
+    "email": "test5@gmail.com",
+    "password": "$2a$10$ViowvNcXduBZiLhcRtKo8O4M/9mCqMqieQN1gB1Hj4K5MG8vUVnIK"
   }
 ]

@@ -3,7 +3,6 @@ import express, {
   Request,
   Response,
 } from "express";
-import { Server } from "http";
 import { config } from "dotenv";
 config();
 import morgan from "morgan";
@@ -30,14 +29,6 @@ app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/random`, quoteRoutes);
 app.get("/", (req: Request, res: Response) => {
   res.send({ status: "Running", message: "Hello from microservices API" });
-});
-
-//App Port
-const PORT = process.env.PORT || 3000;
-
-//App Server
-const server: Server = app.listen(PORT, () => {
-  console.log(`App listning on port ${PORT}`);
 });
 
 export default app;
