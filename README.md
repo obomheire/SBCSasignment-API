@@ -1,79 +1,71 @@
-### Clone the repo: https://github.com/obomheire/SBCSasignment-API.git
+#### 1.  Clone the repo: https://github.com/obomheire/SBCSasignment-API.git
 
-### Install dependencies: run ( npm install or yarn )
+#### 2. Install dependencies: run ( npm install or yarn )
 
-### Build/Compile the app: run ( npm run build / yarn build or npm run tsc / yarn tsc )
+#### 3. Build/Compile the app: run ( npm run build / yarn build or npm run tsc / yarn tsc )
 
-### Start the server: run ( npm run start or yarn start )
+#### 4. Start the server: run ( npm run start or yarn start )
 
-### NB: To compile and start the app at the same time in a watch mode, run ( npm run dev or yarn dev )
+#### 5. NB: To compile and start the app at the same time in a watch mode, run ( npm run dev or yarn dev )
 
-### To run the test: run ( npm run test / yarn test or npm run jest / yarn jest )
+#### 6. To run the test: run ( npm run test / yarn test or npm run jest / yarn jest )
 
-### To run the test in watch mode: run ( npm run jest --watch or yarn jest --watch )
+#### 7. To run the test in watch mode: run ( npm run jest --watch or yarn jest --watch )
 
-## API Endpoints
+###  API Endpoints
 
-### GET localhost:3000/ : Welcome message
+#### 1. API Landing Route:
 
-### API Landing Route:
+##### To access the API landing page, make a GET request to localhost:3000/
 
-#### To access the API landing page, make a GET request to localhost:3000/
+##### Request url:
 
-#### Request url:
+##### localhost:3000/
 
-#### localhost:3000/
+##### Response body:
 
-#### Response body:
+##### { "status": "Running", "message": "Hello from microservices API"}
 
-#### { "status": "Running", "message": "Hello from microservices API"}
+#### 2. API Login Route:
 
-### POST localhost:3000/api/v1/users/login : Login a user
+##### To login, make a POST request to localhost:3000/api/v1/users/login
 
-### API Login Route:
+##### Request url:
 
-#### To login, make a POST request to localhost:3000/api/v1/users/login
+##### localhost:3000/api/v1/users/login
 
-#### Request url:
+##### Request body:
 
-#### localhost:3000/api/v1/users/login
+##### { "email":"test@gmail.com", "password": "Secret@123"}
 
-#### Request body:
+##### Response body:
 
-#### { "email":"test@gmail.com", "password": "Secret@123"}
+##### { "success": true, "Message": "User successfully login", "token": "token"}
 
-#### Response body:
+#### 3. API Registration Route:
 
-#### { "success": true, "Message": "User successfully login", "token": "token"}
+##### To register new user: make a post request to localhost:3000/api/v1/users/register
 
-### POST localhost:3000/api/v1/users/signup : Signup a user
+##### Request url:
 
-### API Registration Route:
+##### localhost:3000/api/v1/users/register
 
-#### To register new user: make a post request to localhost:3000/api/v1/users/register
+##### Request body:
 
-#### Request url:
+##### { "name": "Test User2", "email": "test2@gmail.com", "password": "Secret@123" }
 
-#### localhost:3000/api/v1/users/register
+##### Response body:
 
-#### Request body:
+##### { "Message": "User successfully created!"}
 
-#### { "name": "Test User2", "email": "test2@gmail.com", "password": "Secret@123" }
+#### 4. API Random Quotes:
 
-#### Response body:
+##### To get random quote, login from the login route. Copy the token in the response body and paste it in the Authorization > Bearer Token > Token tab of the GET Quotes route and make a GET request to localhost:3000/api/v1/random/quote
 
-#### { "Message": "User successfully created!"}
+##### Request url:
 
-### GET localhost:3000/api/v1/random/quote : Get a random quote
+##### localhost:3000/api/v1/random/quote
 
-### API Random Quotes:
+##### Response body:
 
-#### To get random quote, login from the login route. Copy the token in the response body and paste it in the Authorization > Bearer Token > Token tab of the GET Quotes route and make a GET request to localhost:3000/api/v1/random/quote
-
-#### Request url:
-
-#### localhost:3000/api/v1/random/quote
-
-#### Response body:
-
-#### { "quote": { "text": "Genius is one percent inspiration and ninety-nine percent perspiration.", "author": "Thomas Edison" }}
+##### { "quote": { "text": "Genius is one percent inspiration and ninety-nine percent perspiration.", "author": "Thomas Edison" }}
