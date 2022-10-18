@@ -8,7 +8,7 @@ const request = supertest(app);
 import bcrypt from "bcryptjs";
 import { loginUser, regUser } from "./testInpute";
 
-let token: string = "";
+export let token: string = "";
 
 //User registration test
 describe("POST /register ", () => {
@@ -57,15 +57,35 @@ describe("POST /login", () => {
         });
       });
     } else {
-        test("user with incorrect password should not be able to login", async () => {
-            const res = await request.post("/api/v1/users/login").send(loginUser);
-            expect(res.status).toBe(400);
-            expect(res.body).toMatchObject({
-            Message: "User not found or invalid credentials!",
-            });
+      test("user with incorrect password should not be able to login", async () => {
+        const res = await request.post("/api/v1/users/login").send(loginUser);
+        expect(res.status).toBe(400);
+        expect(res.body).toMatchObject({
+          Message: "User not found or invalid credentials!",
         });
+      });
     }
   });
+});
+
+// Random quote test
+describe("GEt /quote", () => {
+if (token) {
+  test("user should get quote", async () => {
+    const res = await request
+      .get("/api/v1/random/quote")
+      .set("Authorization", `Bearer ${token}`);
+    expect(res.status).toBe(200);
+    expect(res.body).toMatchObject({
+      quote: expect.any(Object),
+    });
+  });
+} else {
+  test("user should not get quote", async () => {
+    const res = await request.get("/api/v1/random/quote");
+    expect(res.status).toBe(401);
+  });
+}
 });
 
 // Setup test
