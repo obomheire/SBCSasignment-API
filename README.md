@@ -1,16 +1,20 @@
+#### Postman documenation for the api: https://documenter.getpostman.com/view/23412698/2s847HNCV6
+
 #### 1.  Clone the repo: https://github.com/obomheire/SBCSasignment-API.git
 
 #### 2. Install dependencies: run ( npm install or yarn )
 
-#### 3. Build/Compile the app: run ( npm run build / yarn build or npm run tsc / yarn tsc )
+#### 3. Use the env-example file to create a .env file in the root directory of the project
 
-#### 4. Start the server: run ( npm run start or yarn start )
+#### 4. Build/Compile the app: run ( npm run build / yarn build or npm run tsc / yarn tsc )
 
-#### 5. NB: To compile and start the app at the same time in a watch mode, run ( npm run dev or yarn dev )
+#### 5. Start the server: run ( npm run start or yarn start )
 
-#### 6. To run the test: run ( npm run test / yarn test or npm run jest / yarn jest )
+#### 6. NB: To compile and start the app at the same time in a watch mode, run ( npm run dev or yarn dev )
 
-#### 7. To run the test in watch mode: run ( npm run jest --watch or yarn jest --watch )
+#### 7. To run the test: run ( npm run test / yarn test or npm run jest / yarn jest )
+
+#### 8. To run the test in watch mode: run ( npm run jest --watch or yarn jest --watch )
 
 ###  API Endpoints
 
